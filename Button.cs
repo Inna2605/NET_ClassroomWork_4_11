@@ -13,8 +13,14 @@ namespace NET_ClassroomWork_21_10
 {
     internal class Button
     {
+        public string Name {  get; set; }
         public delegate void MyDelegate(string mes);
         public event MyDelegate Click;
+        public Button(string name)
+        {
+            Name = name;
+        }
+
         public void Initiation (string mes)
         {
             Click.Invoke(mes);

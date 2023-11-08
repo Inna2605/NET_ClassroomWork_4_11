@@ -15,11 +15,11 @@ namespace NET_ClassroomWork_21_10
     {
         static void Main(string[] args)
         {
-            Button button = new Button();
+            Button button = new Button("Кнопка");
             button.Click += Subscriber1.PressingButton;
             button.Click += Subscriber2.PressingButton;
 
-            button.Initiation("Була натиснута кнопка");
+            button.Initiation(button.Name);
             Console.ReadLine();
         }
     }
